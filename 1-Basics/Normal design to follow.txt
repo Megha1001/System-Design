@@ -59,5 +59,6 @@ SYSTEM DESIGN
 		
 		bottle neck : one server is not able to handle.
 		
+	5. SCALING
 	NOW scale for the number identified in gather requirement and go one by one and ensure all the requirements are fulfilled
 		
