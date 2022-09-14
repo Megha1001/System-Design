@@ -1,0 +1,50 @@
+
+Conversion
+---------------------
+1 bit = 0/1
+1 byte = 8 bits
+1 KB = 1024 bytes = 10^3 B
+1 MB = 1024 KB = 10^3 KB
+1 GB = 1024 MB = 10^3 MB
+1 TB = 1024 MB = 10^3 GB
+1 PB = 1024 TB = 10^3 TB
+
+1 Million = 10^6
+1 Billion = 10^9
+
+SYSTEM DESIGN
+---------------------
+5 steps framework
+	1. Gather requirements
+		Always ask clarifying questions
+	
+	Once you get it , write it down somewhere
+	Note : do not spent more than 2 mins here.
+
+	2. Estimate Scale - give certain assumption and interviewer will give you answers to that/ask questions
+		for ex: How many daily users are going to be there?
+		a. Store
+			Suppose ; 1 Million
+				Convert 1 M --> how much storage going to required here	
+					For ex : we can make assumption -> 90% read and 10% right
+						10% right means --> 1 M *10 % = 100K users
+						How much data it needs ?
+							if one record takes 1 KB space 
+								Total space : 1 KB * 100K users = 100MB data --> on daily basis --> it wont be 1 M * 1KB since all are not generating the data.
+									for 1 year --> 365 * 100MB = 36.5 GB
+										it tells us only one instance can hold the data.(for 1TB might be more machine)
+		
+		b. TPS - how many requests we are getting for writing & reading.
+			TPS - Throughput per second
+			for Ex : if we are getting 1 M read request then we need to have some sort of caching enabled becuare one server cannot be cater this
+		
+	
+	3. Design goals
+		CAP theorem : https://www.educative.io/blog/what-is-cap-theorem, https://www.youtube.com/watch?v=8UryASGBiR4
+		Consistency : All nodes can see the same data
+		Availability : System remain operation all of the time, no matter for the state of the node
+		Partition tolerance : System doesnot fail regarding of delayed or dropped messages b.w nodes
+		
+		CAP theorem states that distributed system can provide only 2 properties simultaneously
+		a. first identify consistency vs availablity trade off
+		b. identify latency vs consistency
