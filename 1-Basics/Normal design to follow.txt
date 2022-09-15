@@ -26,7 +26,7 @@ SYSTEM DESIGN
 		a. Store
 			Suppose ; 1 Million
 				Convert 1 M --> how much storage going to required here	
-					For ex : we can make assumption -> 90% read and 10% right
+					For ex : we can make assumption -> 90% read and 10% write
 						10% right means --> 1 M *10 % = 100K users
 						How much data it needs ?
 							if one record takes 1 KB space 
