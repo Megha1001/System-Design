@@ -1,2 +1,9 @@
 - Protocols types
 
+- Architectural Pillars(CPRSO)
+  - Cost
+  - Performance
+  - Reliability
+  - Security
+  - Operational Execellence
+
